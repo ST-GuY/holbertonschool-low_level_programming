@@ -16,4 +16,5 @@ for (num = 0; num < 10; num++)
 	}
 
 	return (0);
+timeout 10s ./print_numbers
 }
