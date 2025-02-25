@@ -1,4 +1,4 @@
-#include <ctype.h>
+#include <stdio.h>
 /*
  * _isdigit(int c); - Vérifie si un caractère est un chiffre (0-9).
  *
