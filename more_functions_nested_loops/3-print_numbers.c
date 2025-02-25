@@ -1,6 +1,6 @@
-#include <unistd.h> /* Pour _putchar */
+#include <unistd.h>
 
-/**
+/*
  * print_numbers - Affiche les nombres de 0 à 9, suivis d'un saut de ligne.
  */
 
