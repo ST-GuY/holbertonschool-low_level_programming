@@ -17,22 +17,22 @@ int main()
     int i;
 
     for (i = 0; i < 4; i++) {
-        putchar('_');
-        putchar('i');
-        putchar('s');
-        putchar('u');
-        putchar('p');
-        putchar('p');
-        putchar('e');
-        putchar('r');
-        putchar('(');
-        putchar(tests[i]);
-        putchar(')');
-        putchar(' ');
-        putchar('=');
-        putchar(' ');
-        putchar(_isupper(tests[i]) + '0');
-        putchar('\n');
+        _putchar('_');
+        _putchar('i');
+        _putchar('s');
+        _putchar('u');
+        _putchar('p');
+        _putchar('p');
+        _putchar('e');
+        _putchar('r');
+        _putchar('(');
+        _putchar(tests[i]);
+        _putchar(')');
+        _putchar(' ');
+        _putchar('=');
+        _putchar(' ');
+        _putchar(_isupper(tests[i]) + '0');
+        _putchar('\n');
     }
 
     return 0;
