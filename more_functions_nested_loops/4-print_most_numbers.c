@@ -1,20 +1,24 @@
-#include <unistd.h>
+#include <stdio.h>
 
 /**
- * print_most_numbers - Prints numbers from 0 to 9, excluding 2 and 4.
+ * print_most_numbers - Affiche les chiffres de 0 à 9 sauf 2 et 4.
  */
 
-void print_most_numbers(void)
-{
-	int _putchar(char c);
-	int i;
+int _putchar(char c);
 
-	for (i = 0; i <= 9; i++)
-    {
-	if (i != 2 && i != 4)
+void print_most_numbers(void)
+
 {
-	_putchar(i + '0');
+	char numbers[] = "01356789\n";
+
+	_putchar(numbers[0]);
+
+	_putchar(numbers + 1);
 }
+
+int main(void)
+{
+	print_most_numbers();
+	return (0);
 }
-	_putchar('\n');
-}
+
