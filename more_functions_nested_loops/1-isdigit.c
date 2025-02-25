@@ -1,6 +1,8 @@
 #include <ctype.h>
 /*
- * function that checks for a digit (0 through 9).
+ * _isdigit(int c); - Vérifie si un caractère est un chiffre (0-9).
+ *
+ * Return: 1 si c est un chiffre, 0 sinon.
 */
 
 int _isdigit(int c)
