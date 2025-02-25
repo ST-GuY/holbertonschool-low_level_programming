@@ -8,22 +8,32 @@
  */
 int _isupper(int c)
 {
-    if (c >= 'A' && c <= 'Z')
-        return (1);
-    return (0);
+    return (c >= 'A' && c <= 'Z');
 }
 
 int main()
 {
-    char test1 = 'A';
-    char test2 = 'z';
-    char test3 = 'G';
-    char test4 = '5';
+    char tests[] = {'A', 'z', 'G', '5'};
+    int i;
 
-    printf("_isupper('%c') = %d\n", test1, _isupper(test1));
-    printf("_isupper('%c') = %d\n", test2, _isupper(test2));
-    printf("_isupper('%c') = %d\n", test3, _isupper(test3));
-    printf("_isupper('%c') = %d\n", test4, _isupper(test4));
+    for (i = 0; i < 4; i++) {
+        putchar('_');
+        putchar('i');
+        putchar('s');
+        putchar('u');
+        putchar('p');
+        putchar('p');
+        putchar('e');
+        putchar('r');
+        putchar('(');
+        putchar(tests[i]);
+        putchar(')');
+        putchar(' ');
+        putchar('=');
+        putchar(' ');
+        putchar(_isupper(tests[i]) + '0');
+        putchar('\n');
+    }
 
     return 0;
 }
