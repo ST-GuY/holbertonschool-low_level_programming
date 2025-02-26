@@ -1,10 +1,8 @@
-#include <stdio.h>
+#include <unistd.h>
 
 /**
  * print_most_numbers - Affiche les chiffres de 0 à 9 sauf 2 et 4.
  */
-
-int _putchar(char c);
 
 void print_most_numbers(void)
 
