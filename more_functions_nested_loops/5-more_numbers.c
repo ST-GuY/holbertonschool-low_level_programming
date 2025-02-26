@@ -1,8 +1,13 @@
 #include "main.h"
 
 /**
- * Function that prints 10 times the numbers, from 0 to 14.
-*/
+ * more_numbers - Affiche 10 fois les nombres de 0 à 14.
+ *
+ * Description :
+ * Cette fonction imprime les nombres de 0 à 14 en utilisant _putchar.
+ * Elle répète cette séquence 10 fois.
+ * Un retour à la ligne est ajouté après chaque série.
+ */
 
 void more_numbers(void)
 {
