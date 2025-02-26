@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - Programme qui affiche Fizz, Buzz ou FizzBuzz pour les multiples de 3 et 5.
+ * main - Programme qui affiche Fizz, Buzz ou FizzBuzz
+ * pour les multiples de 3 et 5.
  *
  * Description :
  * - Affiche "Fizz" pour les multiples de 3.
@@ -9,7 +10,6 @@
  * - Affiche "FizzBuzz" pour les multiples de 3 et 5.
  * - Affiche le nombre normal sinon.
  * - Affiche les résultats de 1 à 100.
- *
  * Return: 0 (Succès)
  */
 
