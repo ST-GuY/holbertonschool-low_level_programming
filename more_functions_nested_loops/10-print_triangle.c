@@ -7,7 +7,8 @@
  * Description :
  * Cette fonction affiche un triangle droit aligné à droite.
  * Chaque ligne contient un nombre croissant de '#' précédé d'espaces.
- * Si 'size' est inférieur ou égal à 0, elle affiche juste un retour à la ligne.
+ * Si 'size' est inférieur ou égal à 0,
+ * elle affiche juste un retour à la ligne.
  */
 void print_triangle(int size)
 {
