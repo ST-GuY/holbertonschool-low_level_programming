@@ -1,24 +1,20 @@
-#include <stdio.h>
-#include <string.h>
+#include "main.h"
 
 /**
- * rev - Reverses a string in place.
- * @s: The string to reverse.
+ * print_rev - Prints a string in reverse, followed by a new line.
+ * @s: The string to be printed in reverse.
  */
-
 void print_rev(char *s)
 {
-    int l = 0;
-    int r = strlen(s) - 1;
-    char t;
+    int len = 0;
 
-    while (l < r)
+    while (s[len] != '\0') /* Trouver la longueur de la chaîne */
+        len++;
+
+    while (len > 0) /* Imprimer la chaîne en sens inverse */
     {
-        t = s[l];
-        s[l] = s[r];
-        s[r] = t;
-
-        l++;
-        r--;
+        _putchar(s[len - 1]);
+        len--;
     }
+    _putchar('\n');
 }
