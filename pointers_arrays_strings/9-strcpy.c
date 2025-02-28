@@ -9,16 +9,15 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-    int i = 0;
+	int i = 0;
 
-    /* Copier chaque caractère de src vers dest, y compris '\0' */
-    while (src[i] != '\0')
-    {
-        dest[i] = src[i];
-        i++;
-    }
-    dest[i] = '\0'; /* Ajouter le caractère nul à la fin */
+	while (src[i] != '\0')
+	{
+	dest[i] = src[i];
+	i++;
+	}
+	dest[i] = '\0';
 
-    return (dest);
+	return (dest);
 }
 
