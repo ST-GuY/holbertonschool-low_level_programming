@@ -6,15 +6,15 @@
  */
 void print_rev(char *s)
 {
-    int len = 0;
+	int len = 0;
 
-    while (s[len] != '\0') /* Trouver la longueur de la chaîne */
-        len++;
+	while (s[len] != '\0') /* Trouver la longueur de la chaîne */
+		len++;
 
-    while (len > 0) /* Imprimer la chaîne en sens inverse */
-    {
-        _putchar(s[len - 1]);
-        len--;
-    }
-    _putchar('\n');
+	while (len > 0) /* Imprimer la chaîne en sens inverse */
+	{
+		_putchar(s[len - 1]);
+		len--;
+	}
+	_putchar('\n');
 }
