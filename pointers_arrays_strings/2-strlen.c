@@ -3,8 +3,9 @@
 /**
  * _strlen - Retourne la longueur d'une chaîne de caractères.
  * @s: Pointeur vers la chaîne de caractères.
- * Retour: La longueur de la chaîne.
+ * Return: 1
  */
+
 int _strlen(char *s)
 {
 	int longueur = 0;
