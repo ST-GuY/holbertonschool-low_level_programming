@@ -1,7 +1,8 @@
 #include "main.h"
 
 /*
- * _atoi - Find digit in string
+ * _atoi - convert a string to an int
+ * Description: find digits in string
  * @s: string
  * Return: int
 */
