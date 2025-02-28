@@ -3,7 +3,6 @@
 /**
  * _strlen - Retourne la longueur d'une chaîne de caractères.
  * @s: Pointeur vers la chaîne de caractères.
- * 
  * Retour: La longueur de la chaîne.
  */
 int _strlen(char *s)
@@ -12,9 +11,9 @@ int _strlen(char *s)
 
 	while (s[longueur] != '\0')
 	{
-	longueur++;
+		longueur++;
 	}
 
-	return longueur;
+	return (longueur);
 }
 
