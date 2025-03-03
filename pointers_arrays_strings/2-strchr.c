@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stddef.h>
 /**
  * _strchr - Recherche un caractère dans une chaîne.
  * @s: Pointeur vers la chaîne de caractères.
