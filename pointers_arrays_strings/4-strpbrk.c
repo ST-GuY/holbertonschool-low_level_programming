@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stddef.h>
 /**
  * _strpbrk - Recherche la première occurrence
  * dans `s` de n'importe quel caractère de `accept`.
