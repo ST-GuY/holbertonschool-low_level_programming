@@ -8,25 +8,28 @@
  * or NULL if the substring is not found.
  */
 
-char *_strstr(char *haystack, char *needle) {
+char *_strstr(char *haystack, char *needle)
+{
 	if (!*needle)
-		return haystack;
+		return (haystack);
 
-	while (*haystack) {
-	char *h = haystack;
-	char *n = needle;
+	while (*haystack)
+	{
+		char *h = haystack;
+		char *n = needle;
 
-	while (*h && *n && (*h == *n)) {
+		while (*h && *n && (*h == *n))
+		{
 		h++;
 		n++;
-	}
+		}
 
 	if (!*n)
-		return haystack;
+		return (haystack);
 
-	haystack++;
+		haystack++;
 	}
 
-	return NULL;
+	return (NULL);
 }
 
