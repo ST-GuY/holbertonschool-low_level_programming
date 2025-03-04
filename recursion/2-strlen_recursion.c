@@ -8,8 +8,7 @@
  */
 int _strlen_recursion(char *s)
 {
-	if (*s == '\0')  /* Condition d'arrêt : fin de la chaîne */
+	if (*s == '\0')
 		return (0);
-    
-	return (1 + _strlen_recursion(s + 1));  /* Ajoute 1 et continue la récursion */
+	return (1 + _strlen_recursion(s + 1));
 }
