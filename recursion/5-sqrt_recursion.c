@@ -16,4 +16,13 @@ int _sqrt_helper(int n, int i)
 		return (i);
     
 	return (_sqrt_helper(n, i + 1)); /* Teste le prochain nombre */
+
+}
+
+int _sqrt_recursion(int n)
+{
+	if (n < 0 )
+		return (-1);
+
+	return (_sqrt_helper(n, 1));
 }
