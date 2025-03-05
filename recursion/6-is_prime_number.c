@@ -9,11 +9,26 @@
  */
 int _is_prime_helper(int n, int i)
 {
-    if (i * i > n)  /* Si i dépasse √n, alors n est premier */
-        return (1);
-    
-    if (n % i == 0) /* Si n est divisible par i, alors il n'est pas premier */
-        return (0);
-    
-    return (_is_prime_helper(n, i + 1)); /* Teste le diviseur suivant */
+	if (i * i > n)
+		return (1);
+
+	if (n % i == 0)
+		return (0);
+
+	return (_is_prime_helper(n, i + 1));
+}
+
+/**
+ * is_prime_number - Check if prime number
+ * @n: Number check
+ * Return: if the input integer is a prime number, otherwise return 0
+*/
+
+int is_prime_number(int n)
+{
+	if (n < 0)
+		return (-1);
+	if (n == 0)
+		return (1);
+	return (_is_prime_helper(n, 2));
 }
