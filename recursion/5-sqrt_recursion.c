@@ -14,14 +14,19 @@ int _sqrt_helper(int n, int i)
 		return (-1);
 	if (i * i == n) /* Si i^2 == n, alors i est la racine carrée */
 		return (i);
-    
+
 	return (_sqrt_helper(n, i + 1)); /* Teste le prochain nombre */
 
 }
+/**
+ * _sqrt_recursion - Find square root.
+ * @n: The number to find the square root of.
+ * Return: The natural square root of n, or -1 if none exists.
+*/
 
 int _sqrt_recursion(int n)
 {
-	if (n < 0 )
+	if (n < 0)
 		return (-1);
 
 	return (_sqrt_helper(n, 1));
