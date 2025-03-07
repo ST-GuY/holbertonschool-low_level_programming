@@ -9,7 +9,8 @@
 int main(int argc, char *argv[])
 
 {
-	printf("Le premier argument est : %s\n", argv[0]);
-	printf("Nombre d'arguments: %d\n", argc -1);
-		return (0);
+	printf("%d\n", argc -1);
+	(void)argv;
+
+	return (0);
 }
