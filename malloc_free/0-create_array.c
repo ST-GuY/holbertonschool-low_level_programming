@@ -1,7 +1,8 @@
 #include <stdlib.h>
 
 /**
- * create_array - Crée un tableau de chars et l'initialise avec un char donné.
+ * create_array - Crée un tableau de chars
+ * et l'initialise avec un char donné.
  * @size: Taille du tableau à allouer.
  * @c: Caractère à utiliser pour initialiser chaque case.
  *
