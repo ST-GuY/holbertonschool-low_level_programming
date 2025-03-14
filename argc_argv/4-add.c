@@ -1,27 +1,32 @@
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
+
 /**
- * 
- *
- *
+ * main -  Prints the addition of positive numbers
+ * @argc: arguments contents
+ * @argv: arguments vectors
+ * Return: 0 on success, 1 on error
  */
 
 int main(int argc, char *argv[])
 {
-	int result;
+	int result = 0;
+	int i, j;
 
-	result = 0;
-	printf("%d\n", result);
-	if (argc == 1)
-		printf("0\n");
-	for (j = 
-	for (i = 0; i < strlen(argv[1]); ++i);
+	for (i = 1; i < argc; i++)
 	{
-		if (argv[1][i] < '0' || argv[1][i] > '9')
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			printf("Error\n");
-			return (1);
+			if (argv[i][j] < '0' || argv[i][j] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
+
+		result += atoi(argv[i]);
 	}
+
+	printf("%d\n", result);
 	return (0);
 }
