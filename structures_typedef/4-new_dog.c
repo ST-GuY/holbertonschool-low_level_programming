@@ -1,41 +1,41 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "dog.h"
 
 /**
- * new_dog - Crée un nouveau chien et stocke une copie de ses informations
- * @name: Nom du chien
- * @age: Âge du chien
- * @owner: Nom du propriétaire
- *
- * Return: Un pointeur vers le nouveau chien, ou NULL en cas d'échec.
+ * new_dog - crée un nouveau chien.
+ * @name: Le nom du chien.
+ *@age: L'age du chien.
+ *@owner: Le propriétaire du chien.
+ * Return: Un pointeur vers le chien crée, ou NULL si l'échec.
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *d;
+	dog_t *dog;
 
-	d = malloc(sizeof(dog_t));
-	if (d == NULL)
+	dog = malloc(sizeof(dog_t));
+	if (dog == NULL)
 		return (NULL);
 
-	d->name = strdup(name);
-	if (d->name == NULL)
+	dog->name = malloc(strlen(name) + 1);
+	if (dog->name == NULL)
 	{
-		free(d);
+		free(dog);
 		return (NULL);
 	}
+	strcpy(dog->name, name);
 
-	d->owner = strdup(owner);
-	if (d->owner == NULL)
+	dog->owner = malloc(strlen(owner) + 1);
+	if (dog->owner == NULL)
 	{
-		free(d->name);
-		free(d);
+		free(dog->name);
+		free(dog);
 		return (NULL);
 	}
+	strcpy(dog->owner, owner);
 
-	d->age = age;
+	dog->age = age;
 
-	return (d);
+	return (dog);
 }
-
