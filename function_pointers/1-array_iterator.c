@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
- * array_iterator - Exécute une fonction donnée sur chaque élément d'un tableau
+ * array_iterator - Exécute une fonction donnée
+ * sur chaque élément d'un tableau
  * @array: Le tableau d'entiers
  * @size: La taille du tableau
  * @action: Un pointeur vers la fonction à appliquer à chaque élément
