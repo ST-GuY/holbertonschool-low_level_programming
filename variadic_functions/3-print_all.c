@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include "variadic_functions.h"
+
 /**
  * print_all - Imprime différents types
  * de données en fonction du format donné.
@@ -10,7 +11,9 @@
  * Si une chaîne est NULL, elle est remplacée par "(nil)".
  * Les types non reconnus sont ignorés.
  */
+
 void print_all(const char * const format, ...)
+
 {
 	va_list args;
 	int i = 0;
