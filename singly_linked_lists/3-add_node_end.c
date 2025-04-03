@@ -1,13 +1,22 @@
 #include "lists.h"
 
+/**
+ * _strlen - Computes the length of a string.
+ * @str: The input string whose length is to be calculated.
+ *
+ * Return: The length of the string
+ */
+
 int _strlen(char *str)
 {
 	int len = 0;
-	while(str)
+
+	while (str)
 	{
-		len ++;
-		str ++;
+		len++;
+		str++;
 	}
+
 	return (len);
 }
 /**
