@@ -1,66 +1,66 @@
 #include "lists.h"
+#include <stdlib.h>
+#include <string.h>
 
 /**
- * _strlen - Computes the length of a string.
- * @str: The input string whose length is to be calculated.
+ * _strlen - Calcule la longueur d'une chaîne de caractères.
+ * @str: La chaîne dont on veut calculer la longueur.
  *
- * Return: The length of the string
+ * Retour: La longueur de la chaîne.
  */
-
-int _strlen(char *str)
+int _strlen(const char *str)
 {
-	int len = 0;
+    int len = 0;
 
-	while (str)
-	{
-		len++;
-		str++;
-	}
+    while (str[len])
+        len++;
 
-	return (len);
+    return (len);
 }
+
 /**
- * add_node_end - Adds a new node at the end of a list_t list.
- * @head: A pointer to the head of the list_t list.
- * @str: The string to be added to the new node.
+ * add_node_end - Ajoute un nouveau nœud à la fin d'une liste chaînée de type list_t.
+ * @head: Un double pointeur vers le premier nœud de la liste list_t.
+ * @str: La chaîne de caractères à dupliquer et à ajouter au nouveau nœud.
  *
- * Return: The address of the new element, or NULL if it failed.
+ * Retour: L'adresse du nouvel élément (nœud créé),
+ *         ou NULL en cas d'échec (p.ex., échec d'allocation de mémoire).
  */
 
-list_t *add_node_end(list_t **head, const char *str)
+ list_t *add_node_end(list_t **head, const char *str)
 
-{
-list_t *new_node, *temp;
+ {
+    list_t *new_node, *temp;
 
-if (str == NULL)
-return (NULL);
+    if (!str) /* Gestion des entrées invalides */
+        return (NULL);
 
-new_node = malloc(sizeof(list_t));
-if (new_node == NULL)
-return (NULL);
+    new_node = malloc(sizeof(list_t));
+    if (!new_node) /* Gestion de l'échec de l'allocation de mémoire */
+        return (NULL);
 
-new_node->str = strdup(str);
-if (new_node->str == NULL)
-{
-free(new_node);
-return (NULL);
-}
+    new_node->str = strdup(str);
+    if (!new_node->str) /* Gestion de l'échec de strdup */
+    {
+        free(new_node);
+        return (NULL);
+    }
 
-new_node->len = _strlen(str);
-new_node->next = NULL;
+    new_node->len = _strlen(new_node->str); /* Calcul de la longueur de la chaîne */
+    new_node->next = NULL;
 
-if (*head == NULL)
-{
-*head = new_node;
-return (new_node);
-}
+    if (*head == NULL) /* Si la liste est vide, le nouveau nœud devient le premier nœud */
+    {
+        *head = new_node;
+    }
+    else
+    {
+        temp = *head;
+        while (temp->next) /* Parcourir jusqu'à la fin de la liste */
+            temp = temp->next;
 
-temp = *head;
-while (temp->next != NULL)
+        temp->next = new_node; /* Ajouter le nouveau nœud à la fin */
+    }
 
-temp = temp->next;
-
-temp->next = new_node;
-
-return (new_node);
+    return (new_node);
 }
