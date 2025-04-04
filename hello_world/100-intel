@@ -1,2 +1,24 @@
 #!/bin/bash
-ain.s
+
+# Vérifiez si CFILE est défini et non vide
+if [ -z "$CFILE" ]; then
+  echo "Erreur : La variable CFILE n'est pas définie ou est vide."
+  exit 1
+fi
+
+# Extraire le nom de base (supprimer l’extension .c)
+BASE_NAME=$(basename "$CFILE" .c)
+
+# Définir le nom du fichier de sortie avec l’extension .s
+OUTPUT_FILE="$BASE_NAME.s"
+
+# Compiler le fichier C en assembleur (syntaxe Intel)
+gcc -S -masm=intel "$CFILE" -o "$OUTPUT_FILE"
+
+# Notifier l'utilisateur
+if [ $? -eq 0 ]; then
+  echo "Le code assembleur a été généré et sauvegardé dans $OUTPUT_FILE"
+else
+  echo "Erreur : Échec de la génération du code assembleur."
+  exit 2
+fi
