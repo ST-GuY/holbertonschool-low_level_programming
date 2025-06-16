@@ -1,4 +1,8 @@
 #include <stdio.h>
+/*
+ * Script avec puts
+ * return 0
+ */
 
 int main(void)
 {
