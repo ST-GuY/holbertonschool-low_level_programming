@@ -2,7 +2,11 @@
 #include <unistd.h>
 #include <stdio.h>
 
-
+/**
+ * print_alphabet - Affiche les lettres minuscules de a à z, suivies d’un saut de ligne.
+ *
+ * Return: Rien (void)
+ */
 
 void print_alphabet(void)
 {
