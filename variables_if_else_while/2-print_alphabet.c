@@ -9,14 +9,16 @@
  * Return: 0 (Succès)
  */
 
-int main (void)
+int main(void)
 {
-	int ch;
+int ch;
 
-	for (ch = 'a'; ch <= 'z'; ch++)
-		{
-			putchar(ch);
-		}
-		putchar('\n');
-		return (0);
+for (ch = 'a'; ch <= 'z'; ch++)
+
+{
+putchar(ch);
+}
+
+putchar('\n');
+return (0);
 }
