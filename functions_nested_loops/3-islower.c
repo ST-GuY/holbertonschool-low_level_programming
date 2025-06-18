@@ -3,11 +3,14 @@
 #include <unistd.h>
 
 /**
- * _islower verifi si il y as une majuscule
- * return 1 si vrai
- * return 0 sinon
+ * _islower - Vérifie si un caractère est une lettre minuscule
+ * @c: Le caractère à vérifier (code ASCII)
+ *
+ * Description: Cette fonction retourne 1 si le caractère passé en paramètre
+ * est une lettre minuscule ('a' à 'z'), sinon elle retourne 0.
+ *
+ * Return: 1 si le caractère est une lettre minuscule, 0 sinon
  */
-
 
 int _islower(int c)
 {
