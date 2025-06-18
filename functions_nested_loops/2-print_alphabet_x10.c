@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * print_alphabet - Affiche les lettres minuscules de a à z,
+ * print_alphabet_x10 - Affiche les lettres minuscules de a à z,
  * suivies d’un saut de ligne.
  * dix fois
  * Return: Rien (void)
@@ -13,7 +13,7 @@ void print_alphabet_x10(void)
 {
 int al;
 int i;
-for ( i = 0; i < 10; i++)
+for (i = 0; i < 10; i++)
 {
 for (al = 'a'; al <= 'z'; al++)
 {
