@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <unistd.h>
 
 /**
  * jack_bauer - Affiche chaque minute de la journée de 00:00 à 23:59.
