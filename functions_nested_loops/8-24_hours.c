@@ -20,7 +20,12 @@ void jack_bauer(void)
 	{
 		for (min = 0; min <= 59; min++)
 		{
-		printf("%02d:%02d\n", h, min);
+		_putchar(h / 10 + '0');
+		_putchar(h % 10 + '0');
+		_putchar(':');
+		_putchar(min / 10 + '0');
+		_putchar(min % 10 + '0');
+		_putchar('\n');
 		}
 	}
 }
