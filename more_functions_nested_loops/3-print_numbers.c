@@ -1,6 +1,11 @@
 #include "main.h"
 #include <unistd.h>
 
+/**
+ * print_numbers - Affiche les chiffres de 0 à 9 suivis d'une nouvelle ligne.
+ *
+ * Return: Rien.
+ */
 
 void print_numbers(void)
 {
