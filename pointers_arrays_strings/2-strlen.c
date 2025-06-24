@@ -22,6 +22,7 @@ int _strlen(char *s)
 		p++;
 	}
 		return (p - s);
+}
 
 /**
 int _strlen(char *s)
@@ -35,4 +36,4 @@ int _strlen(char *s)
 	return (count);
 }
 */
-}
+
