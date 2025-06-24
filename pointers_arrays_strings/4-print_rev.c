@@ -1,12 +1,13 @@
 #include "main.h"
 
 /**
- * print_rev - Prints a string in reverse followed by a new line.
- * @s: The string to be printed in reverse.
+ * _strlen - Calcule la longueur d'une chaîne de caractères.
+ * @s: Pointeur vers la chaîne de caractères.
  *
- * Description: This function takes a string as input and
- * prints its characters in reverse order using a loop.
+ * Return: La longueur de la chaîne.
+ *
  */
+
 int _strlen(char *s)
 {
 	char *p;
@@ -22,6 +23,20 @@ int _strlen(char *s)
 	}
 		return (p - s);
 }
+
+/**
+ * print_rev - Prints a string in reverse followed by a new line.
+ * @s: The string to be printed in reverse.
+ *
+ * Description: This function takes a string as input and
+ * prints its characters in reverse order using a loop.
+ *
+ * _strlen - Calcule la longueur d'une chaîne de caractères.
+ * @s: Pointeur vers la chaîne de caractères.
+ *
+ * Return: La longueur de la chaîne.
+ *
+ */
 
 void print_rev(char *s)
 {
