@@ -6,7 +6,7 @@
  * @s: Pointeur vers la chaîne de caractères.
  *
  * Return: La longueur de la chaîne.
- * 
+ *
  * int _strlen(char *s)
  * {
  *	int count;
