@@ -36,7 +36,7 @@ void print_triangle(int size)
 	}
 	else
 	{
-		/* Si la taille est nulle ou négative, affiche simplement un saut de ligne */
+		/* Si la taille est nulle ou négative, affiche un saut de ligne */
 		_putchar('\n');
 	}
 }
