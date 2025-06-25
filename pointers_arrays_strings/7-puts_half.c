@@ -39,11 +39,14 @@ void puts_half(char *str)
 {
 	int longeur = _strlen(str);
 	int moitier = longeur / 2;
+	int i;
 
-		for (moitier = 0 + 5; moitier < longeur; moitier++)
+		for (i= 0; i < moitier; i++)
 		{
-			_putchar(str[moitier]);
+			if (str[moitier] % 2 == 1)
+			{
+				_putchar(str[i]);
+			}
 		}
-
 		_putchar('\n');
 }
