@@ -2,7 +2,8 @@
 
 /**
  * _strcat - Concatène deux chaînes de caractères
- * @dest: Chaîne de destination, doit être assez grande pour contenir le résultat
+ * @dest: Chaîne de destination,
+ * doit être assez grande pour contenir le résultat
  * @src: Chaîne source à ajouter à la fin de dest
  *
  * Return: Pointeur sur la chaîne résultante (dest)
