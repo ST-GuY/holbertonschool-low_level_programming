@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_array - Prints n elements of an array of integers
- * @a: Pointer to the array of integers
- * @n: Number of elements to print
+ * print_array - Imprime n éléments d'un tableau d'entiers
+ * @a : Pointeur sur le tableau d'entiers
+ * @n : Nombre d'éléments à imprimer
  *
- * Description: This function prints the first n elements of the array
- * separated by comma and space. After the last element, it prints a new line.
+ * Description : Cette fonction imprime les n premiers éléments du tableau
+ * séparés par une virgule et un espace. Après le dernier élément, elle imprime une nouvelle ligne.
  */
 
 void print_array(int *a, int n)
