@@ -1,10 +1,12 @@
 #include "main.h"
 
 /**
- * _strcpy - Copie la chaîne de caractères pointée par src vers dest
- * @dest : Pointeur vers le tampon de destination
- * @src : Pointeur vers la chaîne source à copier
- * Return : Pointeur vers dest
+ * _strcpy - Copie la chaîne pointée par src, y compris le caractère nul '\0',
+ *           vers le tampon pointé par dest.
+ * @dest: Pointeur vers le tableau dans lequel la chaîne sera copiée.
+ * @src: Pointeur vers la chaîne source à copier.
+ *
+ * Return: Pointeur vers dest.
  */
 
 char *_strcpy(char *dest, char *src)
