@@ -13,7 +13,7 @@ void reverse_array(int *a, int n)
 	for (i = 0; i < n / 2; i++)
 	{
 		tmp = a[i];               /* Sauvegarde de l'élément courant */
-		a[i] = a[n - i - 1];      /* Remplacement par l'élément symétrique depuis la fin */
-		a[n - i - 1] = tmp;       /* Placement de l'élément sauvegardé à la fin */
+		a[i] = a[n - i - 1];      /* Remplace par l'élément symétrique de la fin*/
+		a[n - i - 1] = tmp;       /* Place l'élément sauvegardé à la fin */
 	}
 }
