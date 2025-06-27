@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * cap_string - Met en majuscule la première lettre de chaque mot dans une chaîne
+ * cap_string - Met en majuscule la première
+ * lettre de chaque mot dans une chaîne
  * @chaine: La chaîne de caractères à modifier
  *
  * Return: La chaîne modifiée avec les majuscules
@@ -9,7 +10,7 @@
 char *cap_string(char *chaine)
 {
 	int i = 0; /* Index de parcours de la chaîne */
-	int new_word = 1; /* Indique si le prochain caractère est le début d'un mot */
+	int new_word = 1; /*Indique si le prochain caractère est le début d'un mot*/
 	char sep[] = " \t\n,;.!?\"(){}"; /* Liste des séparateurs de mots */
 
 	while (chaine[i] != '\0') /* Parcours de la chaîne */
@@ -25,6 +26,7 @@ char *cap_string(char *chaine)
 		else
 		{
 			int j = 0; /* Index pour parcourir les séparateurs */
+
 			while (sep[j] != '\0') /* Parcours des séparateurs */
 			{
 				if (chaine[i] == sep[j]) /* Si le caractère courant est un séparateur */
