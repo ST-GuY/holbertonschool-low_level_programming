@@ -14,5 +14,5 @@ char *_memset(char *s, char b, unsigned int n)
 	memset(s, b, n);
 
 	/* Retourne le pointeur vers la zone mémoire modifiée */
-	return (0);
+	return (s);
 }
