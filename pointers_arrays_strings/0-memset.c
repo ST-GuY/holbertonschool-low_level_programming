@@ -11,13 +11,12 @@
 
 char *_memset(char *s, char b, unsigned int n)
 {
-    unsigned int i; /* Déclare une variable pour l'index de boucle */
+	unsigned int i; /* Déclare une variable pour l'index de boucle */
 
     /* Boucle à travers les n octets */
-    for (i = 0; i < n; i++)
-    {
-        s[i] = b; /* Affecte la valeur b à chaque octet */
-    }
-
-    return (s); /* Retourne le pointeur vers la mémoire remplie */
+	for (i = 0; i < n; i++)
+	{
+		s[i] = b; /* Affecte la valeur b à chaque octet */
+	}
+	return (s); /* Retourne le pointeur vers la mémoire remplie */
 }
