@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * print_diagsums - Affiche la somme des deux diagonales d’une matrice carrée
+ * print_diagsums - Affiche la somme des deux diagonales d’une matrice
+ * carrée
  * @a: pointeur vers le premier élément de la matrice (tableau 1D)
  * @size: taille de la matrice (nombre de lignes ou de colonnes)
  *
