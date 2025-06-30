@@ -5,7 +5,7 @@
  * @s: Chaîne dans laquelle on recherche
  * @accept: Chaîne contenant les octets à rechercher
  *
- * Return un pointeur vers la première occurrence
+ * Return: un pointeur vers la première occurrence
  * d'un octet de accept dans s,
  * ou NULL si aucun octet n'est trouvé.
  */
