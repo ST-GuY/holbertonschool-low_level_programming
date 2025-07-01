@@ -14,7 +14,7 @@ int factorial(int n)
 		return (-1); /* Retourne -1 pour indiquer une erreur */
 	}
 
-	if (n == 0) /* Cas de base : 0! = 1 */
+	else if (n == 0) /* Cas de base : 0! = 1 */
 	{
 		return (1); /* Retourne 1 pour n == 0 */
 	}
