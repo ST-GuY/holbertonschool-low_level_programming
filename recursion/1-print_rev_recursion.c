@@ -11,9 +11,11 @@
 
 void _print_rev_recursion(char *s)
 {
-	if (*s > '\0') /* Vérifie si le caractère actuel n'est pas le caractère de fin '\0' */
+	if (*s > '\0') /* Vérifie si le caractère actuel*/
+					/*n'est pas le caractère de fin '\0' */
 		{
-    	_print_rev_recursion(s + 1); /* Appel récursif avec le caractère suivant */
-    	_putchar(*s); /* Affiche le caractère courant après les appels récursifs */
+		_print_rev_recursion(s + 1); /* Appel récursif avec le caractère suivant */
+		_putchar(*s); /* Affiche le caractère courant */
+						/*après les appels récursifs */
 		}
 }
