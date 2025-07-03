@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	if (argc != 3) /* Vérifie qu'il y a exactement 2 arguments */
 	{
 		printf("Error\n"); /* Affiche un message d'erreur si le */
-							/*nombre d'arguments est incorrect */
+							/* nombre d'arguments est incorrect */
 		return (1);        /* Retourne 1 pour indiquer une erreur */
 	}
 
