@@ -10,7 +10,7 @@
  */
 int main(int argc, char **argv)
 {
-	(void)argc;/* On ignore argc pour éviter un warning si non utilisé */
+	(void)argc;	/* On ignore argc pour éviter un warning si non utilisé */
 
 	printf("%s\n", argv[0]); /*Affiche nom du programme suivi d'un saut de ligne*/
 	return (0);
