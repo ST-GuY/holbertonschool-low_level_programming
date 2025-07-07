@@ -3,6 +3,7 @@
 /**
  * _strncat - Concatène deux chaînes en ajoutant au plus n octets de src
  * à la fin de dest, et ajoute un caractère nul à la fin du résultat.
+ * 
  * @dest: Chaîne de destination, modifiée par la fonction.
  * @src: Chaîne source, copiée partiellement dans dest.
  * @n: Nombre maximum de caractères à copier de src.

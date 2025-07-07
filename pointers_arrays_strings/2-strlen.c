@@ -22,16 +22,16 @@
 
 int _strlen(char *s)
 {
-	char *p;
+	char *p; /* Déclare un pointeur temporaire */
 
-	if (s == NULL)
+	if (s == NULL) /* Vérifie si le pointeur est NULL */
 		return (0);
 
-	p = s;
+	p = s; /* Initialise le pointeur temporaire avec le début de la chaîne */
 
-	while (*p != '\0')
+	while (*p != '\0') /* Tant que le caractère pointé n'est pas le caractère de fin */
 	{
-		p++;
+		p++; /* Avance le pointeur d’un caractère */
 	}
-		return (p - s);
+		return (p - s);  /* Calcule le nombre de caractères en soustrayant l'adresse de début de la chaîne de l'adresse de fin */
 }

@@ -5,7 +5,10 @@
  * @dest: Chaîne de destination,
  * doit être assez grande pour contenir le résultat
  * @src: Chaîne source à ajouter à la fin de dest
- *
+ * 
+ * La fonction strcat en C sert à concaténer deux chaînes de caractères,
+ * c’est-à-dire mettre bout à bout deux chaînes.
+ * 
  * Return: Pointeur sur la chaîne résultante (dest)
  */
 char *_strcat(char *dest, char *src)

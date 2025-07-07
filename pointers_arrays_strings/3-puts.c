@@ -1,20 +1,23 @@
 #include "main.h"
 
 /**
- * _puts - Prints a string followed by a new line to stdout
- * @str: Pointer to the string to be printed
+ * _puts - Affiche une chaîne de caractères suivie d’un retour à la ligne
+ * @str: Pointeur vers la chaîne de caractères à afficher
  *
- * Description: This function iterates through each character of the string
- * and prints it using _putchar, followed by a newline character.
+ * Description: Cette fonction parcourt chaque caractère de la chaîne
+ * pointée par str et l’affiche un par un à l’aide de la fonction _putchar.
+ * Une fois la chaîne terminée, elle affiche un saut de ligne ('\n').
+ *
+ * Return: Rien (void)
  */
 
 void _puts(char *str)
 {
-	int i;
+	int i;  /* Variable d’index pour parcourir la chaîne */
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++) /* Parcourt chaque caractère de la chaîne jusqu'au caractère nul '\0' */
 	{
-		_putchar(str[i]);
+		_putchar(str[i]);  /* Affiche le caractère courant */
 	}
-	_putchar('\n');
+	_putchar('\n');  /* Affiche un saut de ligne après la chaîne */
 }

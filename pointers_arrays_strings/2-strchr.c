@@ -8,7 +8,7 @@
  *
  * Return: Pointeur vers la première occurrence
  * du caractère c dans la chaîne s,
- *         ou NULL si le caractère n’est pas trouvé
+ * ou NULL si le caractère n’est pas trouvé
  */
 
 char *_strchr(char *s, char c)
