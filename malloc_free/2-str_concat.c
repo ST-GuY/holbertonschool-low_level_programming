@@ -112,29 +112,29 @@ char *str_concat(char *s1, char *s2)
 {
 	size_t len1, len2, total_length;
 	/* Déclaration des variables pour les longueurs */
-	char *array;/* Pointeur pour la chaîne concaténée */
+	char *array; /* Pointeur pour la chaîne concaténée */
 
-	if (s1 == NULL)/* Si s1 est NULL, on le considère comme chaîne vide */
+	if (s1 == NULL) /* Si s1 est NULL, on le considère comme chaîne vide */
 	{
 		s1 = "";
 	}
-	if (s2 == NULL)/* Si s2 est NULL, on le considère comme chaîne vide */
+	if (s2 == NULL) /* Si s2 est NULL, on le considère comme chaîne vide */
 	{
 		s2 = "";
 	}
 
-	len1 = _strlen(s1);/* Calcul de la longueur de s1 */
-	len2 = _strlen(s2);/* Calcul de la longueur de s2 */
+	len1 = _strlen(s1); /* Calcul de la longueur de s1 */
+	len2 = _strlen(s2); /* Calcul de la longueur de s2 */
 
-	total_length = len1 + len2 + 1;/* Taille totale à allouer (s1 + s2 + '\0') */
+	total_length = len1 + len2 + 1; /* Taille totale à allouer (s1 + s2 + '\0') */
 
 	array = malloc(total_length * sizeof(char));  /* Allocation dynamique */
 
-	if (array == NULL)/* Vérification de la réussite de l'allocation */
+	if (array == NULL) /* Vérification de la réussite de l'allocation */
 		return (NULL);
 
 	_strncpy(array, s1, _strlen(s1)); /* Copie de s1 dans array */
-	_strcat(array, s2);                /* Ajout de s2 à la suite de array */
+	_strcat(array, s2);               /* Ajout de s2 à la suite de array */
 
 	return (array);                   /* Retourne la chaîne concaténée */
 }
