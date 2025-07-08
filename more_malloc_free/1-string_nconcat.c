@@ -107,7 +107,7 @@ int _strlen(char *s)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	size_t len1, len2, total_length;
+	size_t len1, len2;
 	char *array; /* Pointeur pour la chaîne concaténée */
 	/* Si s1 est NULL, on le considère comme chaîne vide */
 	if (s1 == NULL)
@@ -123,10 +123,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	len1 = _strlen(s1);
 	/* Calcul de la longueur de s2 */
 	len2 = _strlen(s2);
-	/* Calcul de la longueur totale sans tenir compte de n */
-	total_length = len1 + len2;
+
 	/* Allocation dynamique de mémoire pour la chaîne concaténée */
-	array = malloc(total_length * sizeof(char));
+	array = malloc(sizeof(char) * (len1 + n + 1));
 	/* Vérification de la réussite de l'allocation */
 	if (array == NULL)
 		return (NULL);
