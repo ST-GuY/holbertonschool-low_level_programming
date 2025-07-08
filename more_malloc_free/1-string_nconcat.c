@@ -143,6 +143,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	/* Copie de s1 dans array */
 	_strncpy(array, s1, _strlen(s1));
 	/* Ajout de s2 (jusqu'à n caractères) à la suite de array */
+	array[len1] = '\0';
+	/*ON s'assure que la chaine et bien terminer aprés ca*/
 	_strncat(array, s2, n);
 	/* Retourne la chaîne concaténée */
 	return (array);
