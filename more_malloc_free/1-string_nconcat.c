@@ -108,40 +108,48 @@ int _strlen(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	size_t len1, len2;
-	char *array; /* Pointeur pour la chaîne concaténée */
-	/* Si s1 est NULL, on le considère comme chaîne vide */
+	char *array; /* Pointeur vers la nouvelle chaîne concaténée */
+
+	/* Si s1 est NULL, on le considère comme une chaîne vide */
 	if (s1 == NULL)
 	{
 		s1 = "";
 	}
-	/* Si s2 est NULL, on le considère comme chaîne vide */
+
+	/* Si s2 est NULL, on le considère comme une chaîne vide */
 	if (s2 == NULL)
 	{
 		s2 = "";
 	}
+
 	/* Calcul de la longueur de s1 */
 	len1 = _strlen(s1);
+
 	/* Calcul de la longueur de s2 */
 	len2 = _strlen(s2);
 
-	/* Si n est supérieur ou égal à la longueur de s2, on ajuste len2 */
+	/* Si n est supérieur ou égal à la longueur de s2, on garde n caractères */
 	if (n >= len2)
 	{
 		len2 = n;
 	}
 
-	/* Allocation dynamique de mémoire pour la chaîne concaténée */
+	/* Allocation dynamique de mémoire pour la nouvelle chaîne (s1 + n caractères de s2 + '\0') */
 	array = malloc(sizeof(char) * (len1 + n + 1));
-	/* Vérification de la réussite de l'allocation */
+
+	/* Vérifie si l’allocation mémoire a échoué */
 	if (array == NULL)
 		return (NULL);
 
-	/* Copie de s1 dans array */
+	/* Copie s1 dans array */
 	_strncpy(array, s1, _strlen(s1));
-	/* Ajout de s2 (jusqu'à n caractères) à la suite de array */
+
+	/* Termine s1 pour s'assurer que l'appel à _strncat fonctionne correctement */
 	array[len1] = '\0';
-	/*ON s'assure que la chaine et bien terminer aprés ca*/
+
+	/* Concatène n caractères de s2 à la fin de array */
 	_strncat(array, s2, n);
-	/* Retourne la chaîne concaténée */
+
+	/* Retourne le pointeur vers la chaîne concaténée */
 	return (array);
 }
