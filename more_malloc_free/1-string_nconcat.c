@@ -124,21 +124,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	/* Calcul de la longueur de s2 */
 	len2 = _strlen(s2);
 
-	/* Allocation dynamique de mémoire pour la chaîne concaténée */
-	array = malloc(sizeof(char) * (len1 + n + 1));
-	/* Vérification de la réussite de l'allocation */
-	if (array == NULL)
-		return (NULL);
-	/* Si n est supérieur ou égal à la longueur de s1, on ajuste len1 */
-	if (n >= len1)
-	{
-		len1 = n;
-	}
 	/* Si n est supérieur ou égal à la longueur de s2, on ajuste len2 */
 	if (n >= len2)
 	{
 		len2 = n;
 	}
+
+	/* Allocation dynamique de mémoire pour la chaîne concaténée */
+	array = malloc(sizeof(char) * (len1 + n + 1));
+	/* Vérification de la réussite de l'allocation */
+	if (array == NULL)
+		return (NULL);
+
 	/* Copie de s1 dans array */
 	_strncpy(array, s1, _strlen(s1));
 	/* Ajout de s2 (jusqu'à n caractères) à la suite de array */
