@@ -20,17 +20,14 @@ int *array_range(int min, int max)
 	ptr = malloc((max - min + 1) * sizeof(int));
 	/* Alloue de la mémoire pour le tableau */
 
-	if (ptr == NULL)  /* Vérifie si l'allocation mémoire a échoué */
+	if (ptr == NULL)/* Vérifie si l'allocation mémoire a échoué */
 	{
 		return (NULL); /* Retourne NULL en cas d'échec de malloc */
 	}
-
-	i = min;          /* Initialise i à la valeur minimale */
-	while (i <= max)  /* Boucle jusqu'à atteindre la valeur maximale */
+	
+	for (i = 0; i <= (min - max); i++) /* Initialise chaque octet à 0 */
 	{
-		ptr[i - min] = 1;
-		/* Stocke la valeur 1 à l'index correspondant */
-		i++;
+		ptr[i] = min + 1;
 	}
 
 	return (ptr);      /* Retourne le pointeur vers le tableau */
