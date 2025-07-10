@@ -18,17 +18,17 @@ void print_dog(struct dog *d)
 
 	if (d->name != NULL)  /* Vérifie si le champ name n'est pas NULL */
 	{
-		printf("Name : %s\n", d->name);  /* Affiche le nom */
+		printf("Name: %s\n", d->name);  /* Affiche le nom */
 	}
 	else
-		printf("Name : (nil)\n");  /* Affiche (nil) si name est NULL */
+		printf("Name: (nil)\n");  /* Affiche (nil) si name est NULL */
 
-	printf("Age : %f\n", d->age);  /* Affiche l'âge */
+	printf("Age: %f\n", d->age);  /* Affiche l'âge */
 
 	if (d->owner != NULL)  /* Vérifie si le champ owner n'est pas NULL */
 	{
-		printf("Owner : %s\n", d->owner);  /* Affiche le nom du propriétaire */
+		printf("Owner: %s\n", d->owner);  /* Affiche le nom du propriétaire */
 	}
 	else
-		printf("Owner : (nil)\n");  /* Affiche (nil) si owner est NULL */
+		printf("Owner: (nil)\n");  /* Affiche (nil) si owner est NULL */
 }
