@@ -8,12 +8,12 @@
  */
 int str_len(const char *s)
 {
-    int len = 0;
+	int len = 0;
 
-    while (s[len] != '\0')
-        len++;
+	while (s[len] != '\0')
+		len++;
 
-    return len;
+	return (len);
 }
 /**
  * str_cpy - Copie une chaîne de caractères
@@ -24,16 +24,16 @@ int str_len(const char *s)
  */
 char *str_cpy(char *dest, const char *src)
 {
-    int i = 0;
+	int i = 0;
 
-    while (src[i] != '\0')
-    {
-        dest[i] = src[i];
-        i++;
-    }
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
 
-    dest[i] = '\0';
-    return dest;
+	dest[i] = '\0';
+	return (dest);
 }
 /**
  * new_dog - Crée une nouvelle structure dog_t
