@@ -69,9 +69,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	d->owner = malloc(str_len(owner) + 1);
 	if (d->owner == NULL)
 	{
-		free(d->name);
-		free(d);
-		return (NULL);
+		free(d->name); 	/* libère ce qu’on avait déjà alloué */
+		free(d);		/* libère la structure elle-même */
+		return (NULL);	/* signale l’échec */
 	}
 
 	/* Copie les chaînes name et owner dans la structure */
