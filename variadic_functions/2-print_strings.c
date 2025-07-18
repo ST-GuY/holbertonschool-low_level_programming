@@ -1,25 +1,34 @@
 #include "variadic_functions.h"
 
+/**
+ * print_strings - Imprime des chaînes de caractères, séparées par un séparateur
+ * @separator: Chaîne utilisée pour séparer les chaînes (peut être NULL)
+ * @n: Nombre de chaînes à imprimer
+ *
+ * Description: Imprime chaque chaîne suivie d’un séparateur (sauf la dernière).
+ * Si une chaîne est NULL, affiche (nil). Termine par une nouvelle ligne.
+ */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	unsigned int i;	/* Compteur pour la boucle */
+	va_list args;           /* Liste des arguments variadiques */
+	unsigned int i;         /* Compteur de boucle */
+	char *str;              /* Pointeur vers chaque chaîne */
 
-	va_list arguments;	/* Variable pour accéder aux arguments variadiques */
+	va_start(args, n);      /* Initialise l'accès aux arguments */
 
-	va_start(arguments, n);	/* Initialise la liste d'arguments après n */
-
-	for (i = 0; i < n; i++)	/* Parcourt chaque argument variadique */
+	for (i = 0; i < n; i++)
 	{
-		printf("%d", va_arg(arguments, int));
-		/* Récupère et affiche l'entier suivant */
+		str = va_arg(args, char *);    /* Récupère l'argument suivant */
+
+		if (str == NULL)
+			printf("(nil)");
+		else
+			printf("%s", str);
 
 		if (separator != NULL && i < n - 1)
-		/* Si séparateur défini et pas dernier élément */
-		{
-			printf("%s", separator);	/* Affiche le séparateur */
-		}
+			printf("%s", separator);
 	}
-	printf("\n");	/* Saut de ligne après affichage */
 
-	va_end(arguments);	/* Libère la liste d'arguments variadiques */
+	printf("\n");           /* Affiche une nouvelle ligne à la fin */
+	va_end(args);           /* Nettoie la liste d'arguments */
 }
