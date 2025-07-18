@@ -1,18 +1,6 @@
 #include "variadic_functions.h"
 
-/**
- * print_numbers - Affiche une liste de nombres
- * entiers séparés par un séparateur donné.
- * @separator: La chaîne de caractères utilisée
- * pour séparer les nombres (peut être NULL).
- * @n: Nombre total d'entiers passés en argument variadique.
- *
- * Description: La fonction utilise les arguments variadiques pour
- * afficher chaque entier passé, séparé par la chaîne `separator`.
- * Si `separator` est NULL, les nombres sont affichés sans séparateur.
- */
-
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;	/* Compteur pour la boucle */
 
