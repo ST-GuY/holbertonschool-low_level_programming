@@ -1,11 +1,13 @@
 #include "variadic_functions.h"
 
 /**
- * print_strings - Imprime des chaînes de caractères, séparées par un séparateur
+ * print_strings - Imprime des chaînes de caractères,
+ * séparées par un séparateur
  * @separator: Chaîne utilisée pour séparer les chaînes (peut être NULL)
  * @n: Nombre de chaînes à imprimer
  *
- * Description: Imprime chaque chaîne suivie d’un séparateur (sauf la dernière).
+ * Description: Imprime chaque chaîne
+ * suivie d’un séparateur (sauf la dernière).
  * Si une chaîne est NULL, affiche (nil). Termine par une nouvelle ligne.
  */
 void print_strings(const char *separator, const unsigned int n, ...)
