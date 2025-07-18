@@ -39,7 +39,7 @@ void print_all(const char * const format, ...)
 				str = va_arg(args, char *);
 				if (str == NULL)        /* Gère le cas où la chaîne est NULL */
 					printf("%s(nil)", sep);
-				if (str != NULL)
+				if (str != NULL)		/* Gère le cas où la chaîne est different de NULL */
 					printf("%s%s", sep, str);
 				break;
 			default:            /* Ignore les caractères non pris en charge */
