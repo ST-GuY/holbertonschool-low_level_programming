@@ -1,6 +1,23 @@
 #include "lists.h"
 /**
- * add_node - Ajoute un nouveau nœud au début d'une liste chaînée de type list_t
+ * _strlen - Calcule la longueur d'une chaîne de caractères
+ * @s: Pointeur vers la chaîne
+ *
+ * Return: Longueur de la chaîne
+ */
+size_t _strlen(const char *s)
+{
+	size_t i = 0;
+
+	while (s[i])
+		i++;
+
+	return (i);
+}
+
+/**
+ * add_node - Ajoute un nouveau nœud au
+ * début d'une liste chaînée de type list_t
  * @head: Double pointeur vers le premier nœud de la liste
  * @str: Chaîne de caractères à dupliquer et mettre dans le nouveau nœud
  *
@@ -28,7 +45,7 @@ list_t *add_node(list_t **head, const char *str)
 	}
 
 	/* Calcule et stocke la longueur de la chaîne */
-	new_node->len = strlen(str);
+	new_node->len = _strlen(str);
 
 	/* Pointe le nouveau nœud vers l'ancien premier nœud */
 	new_node->next = *head;
