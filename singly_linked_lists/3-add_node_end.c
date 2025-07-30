@@ -1,5 +1,20 @@
 #include "lists.h"
 /**
+ * _strlen - Calcule la longueur d'une chaîne de caractères
+ * @s: Pointeur vers la chaîne
+ *
+ * Return: Longueur de la chaîne
+ */
+size_t _strlen(const char *s)
+{
+	size_t i = 0;
+
+	while (s[i])
+		i++;
+
+	return (i);
+}
+/**
  * add_node_end -Ajoute un nouveau nœud à la fin d'une liste chaînée list_t
  * @head: Double pointeur vers le début de la liste
  * @str: Chaîne de caractères à copier dans le nouveau nœud
@@ -25,7 +40,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 
-	new_node->len = strlen(str);	/* Calcule la longueur de la chaîne */
+	new_node->len = _strlen(str);	/* Calcule la longueur de la chaîne */
 	new_node->next = NULL;			/* Le nouveau nœud sera le dernier, donc next = NULL */
 
 	if (*head == NULL)	/* Si la liste est vide */
