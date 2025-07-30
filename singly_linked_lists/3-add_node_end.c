@@ -41,13 +41,13 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 
 	new_node->len = _strlen(str);	/* Calcule la longueur de la chaîne */
-	new_node->next = NULL;			/* Le nouveau nœud sera le dernier, donc next = NULL */
+	new_node->next = NULL;/* Le nouveau nœud sera le dernier, donc next = NULL */
 
 	if (*head == NULL)	/* Si la liste est vide */
 	{
 		*head = new_node;             /* Le nouveau nœud devient le premier */
 	}
-	else                               /* Sinon, on parcourt la liste jusqu'à la fin */
+	else		/* Sinon, on parcourt la liste jusqu'à la fin */
 	{
 		last = *head;                 /* On part du début de la liste */
 		while (last->next != NULL)   /* Tant qu'on n'est pas au dernier nœud */
