@@ -8,31 +8,39 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int flags, fd;
-	/* flags = options d'ouverture ; fd = descripteur de fichier */
-
-	if (filename == NULL) /* Vérifie que le nom de fichier n'est pas NULL */
-		return (-1);      /* Sinon, retourne une erreur */
-
-	flags = O_CREAT | O_WRONLY | O_TRUNC;
-
-    /* open() retourne un descripteur de fichier ou -1 en cas d'erreur */
-    /* 0600 = permissions rw------- */
-	fd = open(filename, flags, 0600);
-	if (fd == -1) /* Si l'ouverture échoue */
-		return (-1);
-
-	if (text_content != NULL) /* Si du texte est fourni */
-	{
-	ssize_t written = write(fd, text_content, strlen(text_content));
-
-		if (written == -1) /* Si l'écriture échoue */
-		{
-			close(fd);     /* Ferme le fichier */
-			return (-1);   /* Retourne une erreur */
-		}
-	}
-
-	close(fd);  /* Ferme le fichier proprement */
-	return (1); /* Succès */
+    int file;
+    ssize_t written;
+    size_t len = 0;
+    /* Vérifie si le nom de fichier est NULL */
+    if (filename == NULL)
+        return (-1); /* Échec si aucun nom de fichier n'est fourni */
+    /* Ouvre le fichier en écriture seule, le crée*/
+    /*s'il n'existe pas, et le tronque s'il existe */
+    file = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+    /* Vérifie si l'ouverture du fichier a échoué */
+    if (file == -1)
+        return (-1); /* Échec si le fichier ne peut pas être ouvert ou créé */
+    /* Si aucun contenu à écrire, on crée juste un fichier vide */
+    if (text_content == NULL)
+    {
+        close(file);
+        return (1); /* Succès : fichier vide créé */
+    }
+    /* Calcule la longueur de la chaîne à écrire */
+    while (text_content[len] != '\0')
+    {
+        len++;
+    }
+    /* Écrit le contenu dans le fichier */
+    written = write(file, text_content, len);
+    /* Vérifie si l'écriture a échoué ou est incomplète */
+    if (written == -1 || (size_t)written != len)
+    {
+        close(file);
+        return (-1); /* Échec de l'écriture */
+    }
+    /* Ferme le fichier après l'écriture */
+    close(file);
+    /* Retourne 1 pour signaler le succès */
+    return (1);
 }
