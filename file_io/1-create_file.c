@@ -13,7 +13,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (filename == NULL) /* Vérifie que le nom de fichier n'est pas NULL */
 		return (-1);      /* Sinon, retourne une erreur */
-   
+
 	flags = O_CREAT | O_WRONLY | O_TRUNC;
 
     /* open() retourne un descripteur de fichier ou -1 en cas d'erreur */
